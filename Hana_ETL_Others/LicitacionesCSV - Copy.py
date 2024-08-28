@@ -1,6 +1,6 @@
 import pandas as pd
 
-# Insertando comentario de prueba para Git
+#   Este comentario es para validar el git fetch
 #   Algunas empresas del archivo de Nina cruzan con el SECOP pero la fecha y la descripción de la oportunidad no coinciden
 #   Debemos buscar manual a ver si algunas de las descripciones coinciden
 #   Comparar con cuantas empresas que están en el SECOP hemos tenido licitaciones
