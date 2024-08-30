@@ -1,0 +1,17 @@
+2024-08-03 16:00:37,056 - INFO - La tabla TBL_EVENTOS_ASISTENTES_SF presentó error en su esquema. **NO SE CARGÓ**
+2024-08-03 16:00:40,805 - INFO - La tabla TBL_EVENTOS_EMPRESAS_SF presentó error en su esquema. **NO SE CARGÓ**
+2024-08-03 16:04:27,016 - INFO - La tabla TBL_VARIABLES_VITALES_SALESFORCE presentó error en su esquema. **NO SE CARGÓ**
+2024-08-03 16:04:48,635 - INFO - La tabla TBL_VENTA_EMPRESARIAL_LECTURA_SF presentó error en su esquema. **NO SE CARGÓ**
+2024-08-03 16:04:52,073 - INFO - La tabla TBL_ALIADOS_SF presentó error en su esquema. **NO SE CARGÓ**
+2024-08-03 16:04:55,003 - INFO - La tabla TBL_CAMPAÑAS_CORPORATIVAS_SF presentó error en su esquema. **NO SE CARGÓ**
+2024-08-03 16:04:58,278 - INFO - La tabla TBL_CAMPAÑAS_EMPRESARIALES_SF presentó error en su esquema. **NO SE CARGÓ**
+2024-08-03 16:05:05,064 - INFO - La tabla TBL_DESARROLLO_EMPRESARIAL_SF presentó error en su esquema. **NO SE CARGÓ**
+2024-08-03 16:05:12,866 - INFO - La tabla TBL_EMPLEABILIDAD_SF presentó error en su esquema. **NO SE CARGÓ**
+2024-08-03 16:05:15,968 - INFO - La tabla TBL_FORMACION_EMP_FOSFEC_SF presentó error en su esquema. **NO SE CARGÓ**
+2024-08-03 16:05:21,946 - INFO - La tabla TBL_LICITACION_SF presentó error en su esquema. **NO SE CARGÓ**
+2024-08-03 16:05:27,120 - INFO - La tabla TBL_VENTA_INDIVIDUAL_COTIZACION_SF presentó error en su esquema. **NO SE CARGÓ**
+2024-08-03 16:05:43,937 - INFO - La tabla TBL_CUENTAS_SF presentó error en su esquema. **NO SE CARGÓ**
+2024-08-03 16:44:27,505 - INFO - La tabla TBL_CUENTAS_PERSONAL_SF presentó error en su esquema. **Se eliminó** y se creó nuevamente con 5055900 registros.
+2024-08-03 16:44:34,047 - INFO - La tabla TBL_RIESGO_SF presentó error en su esquema. **Se eliminó** y se creó nuevamente con 4247 registros.
+2024-08-03 16:50:15,981 - INFO - La tabla TBL_ATRACCION_VISITAS_SF presentó error en su esquema. **Se eliminó** y se creó nuevamente con 497828 registros.
+2024-08-03 16:50:23,085 - INFO - La tabla TBL_PAZYSALVOS_FUGA_SF presentó error en su esquema. **Se eliminó** y se creó nuevamente con 4281 registros.

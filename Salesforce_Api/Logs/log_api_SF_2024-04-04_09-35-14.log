@@ -1,0 +1,18 @@
+2024-04-04 09:35:23,591 - INFO - Executing SQL: CREATE TABLE "COLSUBSIDIO_IDN"."TBL_EVENTOS_ASISTENTES_SF" ("Evento Corporativo: Nombre de Eventos Corporativos" VARCHAR(5000), "Cedula Asistente" VARCHAR(5000), "Nombre asistente" VARCHAR(5000), "Empresa del asistente" VARCHAR(5000), "Nombre de la cuenta" VARCHAR(5000), "Nombre de Evento" VARCHAR(5000), "Mes ejecución de la acción" VARCHAR(5000), "Resumen Asistentes" INT, "Cargo" VARCHAR(5000), "FECHA_CARGUE" VARCHAR(5000));
+2024-04-04 09:35:25,586 - INFO - Se anexó correctamente datos a la tabla TBL_EVENTOS_ASISTENTES_SF con 16343 registros.
+2024-04-04 09:35:29,891 - INFO - Se anexó correctamente datos a la tabla TBL_EVENTOS_EMPRESAS_SF con 7880 registros.
+2024-04-04 09:43:04,053 - INFO - Se anexó correctamente datos a la tabla TBL_VARIABLES_VITALES_SALESFORCE con 1900845 registros.
+2024-04-04 09:43:29,279 - INFO - Se anexó correctamente datos a la tabla TBL_VENTA_EMPRESARIAL_LECTURA_SF con 24290 registros.
+2024-04-04 09:43:33,785 - INFO - Se anexó correctamente datos a la tabla TBL_ALIADOS_SF con 157 registros.
+2024-04-04 09:43:38,215 - INFO - Se anexó correctamente datos a la tabla TBL_CAMPAÑAS_CORPORATIVAS_SF con 663 registros.
+2024-04-04 09:43:42,705 - INFO - Se anexó correctamente datos a la tabla TBL_CAMPAÑAS_EMPRESARIALES_SF con 178 registros.
+2024-04-04 09:43:49,896 - INFO - Se anexó correctamente datos a la tabla TBL_DESARROLLO_EMPRESARIAL_SF con 6377 registros.
+2024-04-04 09:43:58,799 - INFO - Se anexó correctamente datos a la tabla TBL_EMPLEABILIDAD_SF con 8977 registros.
+2024-04-04 09:44:02,343 - INFO - Se anexó correctamente datos a la tabla TBL_FORMACION_EMP_FOSFEC_SF con 72 registros.
+2024-04-04 09:44:10,014 - INFO - Se anexó correctamente datos a la tabla TBL_LICITACION_SF con 4660 registros.
+2024-04-04 09:44:15,543 - INFO - Se anexó correctamente datos a la tabla TBL_VENTA_INDIVIDUAL_COTIZACION_SF con 896 registros.
+2024-04-04 09:45:02,696 - INFO - Se anexó correctamente datos a la tabla TBL_CUENTAS_SF con 96889 registros.
+2024-04-04 09:53:28,714 - INFO - Se anexó correctamente datos a la tabla TBL_CUENTAS_PERSONAL_SF con 5015498 registros.
+2024-04-04 09:53:34,162 - INFO - Se anexó correctamente datos a la tabla TBL_RIESGO_SF con 3955 registros.
+2024-04-04 09:58:18,209 - INFO - Se anexó correctamente datos a la tabla TBL_ATRACCION_VISITAS_SF con 460999 registros.
+2024-04-04 10:00:28,290 - INFO - Se anexó correctamente datos a la tabla TBL_CARTERIZACION_SF con 537533 registros.

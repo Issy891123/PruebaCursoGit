@@ -1,0 +1,50 @@
+2024-05-05 16:00:32,407 - WARNING - (414, 'user is forced to change password: alter password required for user ESTEGOMHIN')
+2024-05-05 16:00:32,505 - ERROR - Failed to retrieve data for the current dataframe, (414, 'user is forced to change password: alter password required for user ESTEGOMHIN')
+2024-05-05 16:00:32,506 - INFO - La tabla TBL_EVENTOS_ASISTENTES_SF presentó error en su esquema. **NO SE CARGÓ**
+2024-05-05 16:00:35,866 - WARNING - (414, 'user is forced to change password: alter password required for user ESTEGOMHIN')
+2024-05-05 16:00:35,936 - ERROR - Failed to retrieve data for the current dataframe, (414, 'user is forced to change password: alter password required for user ESTEGOMHIN')
+2024-05-05 16:00:35,937 - INFO - La tabla TBL_EVENTOS_EMPRESAS_SF presentó error en su esquema. **NO SE CARGÓ**
+2024-05-05 16:04:51,515 - WARNING - (414, 'user is forced to change password: alter password required for user ESTEGOMHIN')
+2024-05-05 16:04:51,612 - ERROR - Failed to retrieve data for the current dataframe, (414, 'user is forced to change password: alter password required for user ESTEGOMHIN')
+2024-05-05 16:04:51,613 - INFO - La tabla TBL_VARIABLES_VITALES_SALESFORCE presentó error en su esquema. **NO SE CARGÓ**
+2024-05-05 16:05:10,182 - WARNING - (414, 'user is forced to change password: alter password required for user ESTEGOMHIN')
+2024-05-05 16:05:10,271 - ERROR - Failed to retrieve data for the current dataframe, (414, 'user is forced to change password: alter password required for user ESTEGOMHIN')
+2024-05-05 16:05:10,272 - INFO - La tabla TBL_VENTA_EMPRESARIAL_LECTURA_SF presentó error en su esquema. **NO SE CARGÓ**
+2024-05-05 16:05:13,975 - WARNING - (414, 'user is forced to change password: alter password required for user ESTEGOMHIN')
+2024-05-05 16:05:14,044 - ERROR - Failed to retrieve data for the current dataframe, (414, 'user is forced to change password: alter password required for user ESTEGOMHIN')
+2024-05-05 16:05:14,044 - INFO - La tabla TBL_ALIADOS_SF presentó error en su esquema. **NO SE CARGÓ**
+2024-05-05 16:05:17,942 - WARNING - (414, 'user is forced to change password: alter password required for user ESTEGOMHIN')
+2024-05-05 16:05:18,012 - ERROR - Failed to retrieve data for the current dataframe, (414, 'user is forced to change password: alter password required for user ESTEGOMHIN')
+2024-05-05 16:05:18,013 - INFO - La tabla TBL_CAMPAÑAS_CORPORATIVAS_SF presentó error en su esquema. **NO SE CARGÓ**
+2024-05-05 16:05:22,499 - WARNING - (414, 'user is forced to change password: alter password required for user ESTEGOMHIN')
+2024-05-05 16:05:22,604 - ERROR - Failed to retrieve data for the current dataframe, (414, 'user is forced to change password: alter password required for user ESTEGOMHIN')
+2024-05-05 16:05:22,605 - INFO - La tabla TBL_CAMPAÑAS_EMPRESARIALES_SF presentó error en su esquema. **NO SE CARGÓ**
+2024-05-05 16:05:29,070 - WARNING - (414, 'user is forced to change password: alter password required for user ESTEGOMHIN')
+2024-05-05 16:05:29,166 - ERROR - Failed to retrieve data for the current dataframe, (414, 'user is forced to change password: alter password required for user ESTEGOMHIN')
+2024-05-05 16:05:29,167 - INFO - La tabla TBL_DESARROLLO_EMPRESARIAL_SF presentó error en su esquema. **NO SE CARGÓ**
+2024-05-05 16:05:36,597 - WARNING - (414, 'user is forced to change password: alter password required for user ESTEGOMHIN')
+2024-05-05 16:05:36,685 - ERROR - Failed to retrieve data for the current dataframe, (414, 'user is forced to change password: alter password required for user ESTEGOMHIN')
+2024-05-05 16:05:36,686 - INFO - La tabla TBL_EMPLEABILIDAD_SF presentó error en su esquema. **NO SE CARGÓ**
+2024-05-05 16:05:39,504 - WARNING - (414, 'user is forced to change password: alter password required for user ESTEGOMHIN')
+2024-05-05 16:05:39,573 - ERROR - Failed to retrieve data for the current dataframe, (414, 'user is forced to change password: alter password required for user ESTEGOMHIN')
+2024-05-05 16:05:39,573 - INFO - La tabla TBL_FORMACION_EMP_FOSFEC_SF presentó error en su esquema. **NO SE CARGÓ**
+2024-05-05 16:05:45,863 - WARNING - (414, 'user is forced to change password: alter password required for user ESTEGOMHIN')
+2024-05-05 16:05:45,932 - ERROR - Failed to retrieve data for the current dataframe, (414, 'user is forced to change password: alter password required for user ESTEGOMHIN')
+2024-05-05 16:05:45,932 - INFO - La tabla TBL_LICITACION_SF presentó error en su esquema. **NO SE CARGÓ**
+2024-05-05 16:05:50,992 - WARNING - (414, 'user is forced to change password: alter password required for user ESTEGOMHIN')
+2024-05-05 16:05:51,063 - ERROR - Failed to retrieve data for the current dataframe, (414, 'user is forced to change password: alter password required for user ESTEGOMHIN')
+2024-05-05 16:05:51,064 - INFO - La tabla TBL_VENTA_INDIVIDUAL_COTIZACION_SF presentó error en su esquema. **NO SE CARGÓ**
+2024-05-05 16:06:09,412 - WARNING - (414, 'user is forced to change password: alter password required for user ESTEGOMHIN')
+2024-05-05 16:06:09,482 - ERROR - Failed to retrieve data for the current dataframe, (414, 'user is forced to change password: alter password required for user ESTEGOMHIN')
+2024-05-05 16:06:09,483 - INFO - La tabla TBL_CUENTAS_SF presentó error en su esquema. **NO SE CARGÓ**
+2024-05-05 16:12:46,299 - WARNING - (414, 'user is forced to change password: alter password required for user ESTEGOMHIN')
+2024-05-05 16:12:46,395 - ERROR - Failed to retrieve data for the current dataframe, (414, 'user is forced to change password: alter password required for user ESTEGOMHIN')
+2024-05-05 16:12:46,396 - INFO - La tabla TBL_CUENTAS_PERSONAL_SF presentó error en su esquema. **NO SE CARGÓ**
+2024-05-05 16:12:51,125 - WARNING - (414, 'user is forced to change password: alter password required for user ESTEGOMHIN')
+2024-05-05 16:12:51,223 - ERROR - Failed to retrieve data for the current dataframe, (414, 'user is forced to change password: alter password required for user ESTEGOMHIN')
+2024-05-05 16:12:51,224 - INFO - La tabla TBL_RIESGO_SF presentó error en su esquema. **NO SE CARGÓ**
+2024-05-05 16:15:13,762 - WARNING - (414, 'user is forced to change password: alter password required for user ESTEGOMHIN')
+2024-05-05 16:15:13,832 - ERROR - Failed to retrieve data for the current dataframe, (414, 'user is forced to change password: alter password required for user ESTEGOMHIN')
+2024-05-05 16:15:13,833 - INFO - La tabla TBL_ATRACCION_VISITAS_SF presentó error en su esquema. **NO SE CARGÓ**
+2024-05-05 16:16:58,743 - WARNING - (414, 'user is forced to change password: alter password required for user ESTEGOMHIN')
+2024-05-05 16:16:58,813 - ERROR - Failed to retrieve data for the current dataframe, (414, 'user is forced to change password: alter password required for user ESTEGOMHIN')

@@ -1,0 +1,2 @@
+2024-08-15 15:54:15,227 - INFO - Table already exists. Begin to truncate table.
+2024-08-15 15:54:15,228 - INFO - Executing SQL: TRUNCATE TABLE "COLSUBSIDIO_IDN"."T_CARTERIZACION_SF_STG";

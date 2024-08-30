@@ -1,0 +1,16 @@
+2024-07-16 16:00:17,266 - INFO - La tabla TBL_EVENTOS_ASISTENTES_SF presentó error en su esquema. **NO SE CARGÓ**
+2024-07-16 16:00:22,179 - INFO - La tabla TBL_EVENTOS_EMPRESAS_SF presentó error en su esquema. **NO SE CARGÓ**
+2024-07-16 16:04:31,616 - INFO - La tabla TBL_VARIABLES_VITALES_SALESFORCE presentó error en su esquema. **NO SE CARGÓ**
+2024-07-16 16:04:49,907 - INFO - La tabla TBL_VENTA_EMPRESARIAL_LECTURA_SF presentó error en su esquema. **NO SE CARGÓ**
+2024-07-16 16:04:54,868 - INFO - La tabla TBL_ALIADOS_SF presentó error en su esquema. **NO SE CARGÓ**
+2024-07-16 16:04:57,873 - INFO - La tabla TBL_CAMPAÑAS_CORPORATIVAS_SF presentó error en su esquema. **NO SE CARGÓ**
+2024-07-16 16:05:02,617 - INFO - La tabla TBL_CAMPAÑAS_EMPRESARIALES_SF presentó error en su esquema. **NO SE CARGÓ**
+2024-07-16 16:05:07,785 - INFO - La tabla TBL_DESARROLLO_EMPRESARIAL_SF presentó error en su esquema. **NO SE CARGÓ**
+2024-07-16 16:05:15,841 - INFO - La tabla TBL_EMPLEABILIDAD_SF presentó error en su esquema. **NO SE CARGÓ**
+2024-07-16 16:05:20,206 - INFO - La tabla TBL_FORMACION_EMP_FOSFEC_SF presentó error en su esquema. **NO SE CARGÓ**
+2024-07-16 16:05:26,284 - INFO - La tabla TBL_LICITACION_SF presentó error en su esquema. **NO SE CARGÓ**
+2024-07-16 16:05:30,368 - INFO - La tabla TBL_VENTA_INDIVIDUAL_COTIZACION_SF presentó error en su esquema. **NO SE CARGÓ**
+2024-07-16 16:05:46,500 - INFO - La tabla TBL_CUENTAS_SF presentó error en su esquema. **NO SE CARGÓ**
+2024-07-16 16:12:06,424 - INFO - La tabla TBL_CUENTAS_PERSONAL_SF presentó error en su esquema. **NO SE CARGÓ**
+2024-07-16 16:12:09,876 - INFO - La tabla TBL_RIESGO_SF presentó error en su esquema. **NO SE CARGÓ**
+2024-07-16 16:15:42,351 - INFO - La tabla TBL_ATRACCION_VISITAS_SF presentó error en su esquema. **NO SE CARGÓ**

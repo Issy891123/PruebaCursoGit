@@ -1,0 +1,3 @@
+2024-08-01 11:50:45,321 - INFO - Table already exists. Begin to truncate table.
+2024-08-01 11:50:45,322 - INFO - Executing SQL: TRUNCATE TABLE "COLSUBSIDIO_IDN"."T_CARTERIZACION_SF_STG";
+2024-08-01 11:52:04,531 - INFO - La tabla T_CARTERIZACION_SF_STG presentó error en su esquema. **Se eliminó** y se creó nuevamente con 548216 registros.

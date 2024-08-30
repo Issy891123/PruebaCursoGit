@@ -1,0 +1,3 @@
+2024-04-03 10:04:55,725 - INFO - Executing SQL: DROP TABLE "COLSUBSIDIO_IDN"."TBL_EVENTOS_ASISTENTES_SF";
+2024-04-03 10:04:55,815 - INFO - Executing SQL: CREATE TABLE "COLSUBSIDIO_IDN"."TBL_EVENTOS_ASISTENTES_SF" ("Evento Corporativo: Nombre de Eventos Corporativos" VARCHAR(5000), "Cedula Asistente" VARCHAR(5000), "Nombre asistente" VARCHAR(5000), "Empresa del asistente" VARCHAR(5000), "Nombre de la cuenta" VARCHAR(5000), "Nombre de Evento" VARCHAR(5000), "Mes ejecución de la acción" VARCHAR(5000), "Resumen Asistentes" INT, "Cargo" VARCHAR(5000), "FECHA_CARGUE" VARCHAR(5000));
+2024-04-03 10:04:57,977 - INFO - La tabla TBL_EVENTOS_ASISTENTES_SF presentó error en su esquema. **Se eliminó** y se creó nuevamente con 16343 registros.

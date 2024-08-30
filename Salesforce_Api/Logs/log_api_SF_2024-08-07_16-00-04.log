@@ -1,0 +1,17 @@
+2024-08-07 16:00:39,889 - INFO - La tabla TBL_EVENTOS_ASISTENTES_SF presentó error en su esquema. **Se eliminó** y se creó nuevamente con 33923 registros.
+2024-08-07 16:00:46,212 - INFO - La tabla TBL_EVENTOS_EMPRESAS_SF presentó error en su esquema. **Se eliminó** y se creó nuevamente con 15224 registros.
+2024-08-07 16:49:56,153 - INFO - La tabla TBL_VARIABLES_VITALES_SALESFORCE presentó error en su esquema. **Se eliminó** y se creó nuevamente con 2230552 registros.
+2024-08-07 16:50:12,983 - INFO - La tabla TBL_VENTA_EMPRESARIAL_LECTURA_SF presentó error en su esquema. **NO SE CARGÓ**
+2024-08-07 16:50:15,876 - INFO - La tabla TBL_ALIADOS_SF presentó error en su esquema. **NO SE CARGÓ**
+2024-08-07 16:50:18,517 - INFO - La tabla TBL_CAMPAÑAS_CORPORATIVAS_SF presentó error en su esquema. **NO SE CARGÓ**
+2024-08-07 16:50:21,470 - INFO - La tabla TBL_CAMPAÑAS_EMPRESARIALES_SF presentó error en su esquema. **NO SE CARGÓ**
+2024-08-07 16:50:26,188 - INFO - La tabla TBL_DESARROLLO_EMPRESARIAL_SF presentó error en su esquema. **NO SE CARGÓ**
+2024-08-07 16:50:34,236 - INFO - La tabla TBL_EMPLEABILIDAD_SF presentó error en su esquema. **NO SE CARGÓ**
+2024-08-07 16:50:37,408 - INFO - La tabla TBL_FORMACION_EMP_FOSFEC_SF presentó error en su esquema. **NO SE CARGÓ**
+2024-08-07 16:50:43,883 - INFO - La tabla TBL_LICITACION_SF presentó error en su esquema. **NO SE CARGÓ**
+2024-08-07 16:50:47,806 - INFO - La tabla TBL_VENTA_INDIVIDUAL_COTIZACION_SF presentó error en su esquema. **NO SE CARGÓ**
+2024-08-07 16:51:01,635 - INFO - La tabla TBL_CUENTAS_SF presentó error en su esquema. **NO SE CARGÓ**
+2024-08-07 16:56:41,495 - INFO - La tabla TBL_CUENTAS_PERSONAL_SF presentó error en su esquema. **NO SE CARGÓ**
+2024-08-07 16:56:47,310 - INFO - La tabla TBL_RIESGO_SF presentó error en su esquema. **NO SE CARGÓ**
+2024-08-07 16:59:35,213 - INFO - La tabla TBL_ATRACCION_VISITAS_SF presentó error en su esquema. **NO SE CARGÓ**
+2024-08-07 16:59:40,592 - INFO - La tabla TBL_PAZYSALVOS_FUGA_SF presentó error en su esquema. **NO SE CARGÓ**

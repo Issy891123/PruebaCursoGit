@@ -1,0 +1,20 @@
+2024-04-12 16:00:14,180 - INFO - Executing SQL: DROP TABLE "COLSUBSIDIO_IDN"."TBL_EVENTOS_ASISTENTES_SF";
+2024-04-12 16:00:14,285 - INFO - Executing SQL: CREATE TABLE "COLSUBSIDIO_IDN"."TBL_EVENTOS_ASISTENTES_SF" ("Evento Corporativo: Nombre de Eventos Corporativos" VARCHAR(5000), "Cedula Asistente" VARCHAR(5000), "Nombre asistente" VARCHAR(5000), "Empresa del asistente" VARCHAR(5000), "Nombre de la cuenta" VARCHAR(5000), "Nombre de Evento" VARCHAR(5000), "Mes ejecución de la acción" VARCHAR(5000), "Resumen Asistentes" INT, "Cargo" VARCHAR(5000), "Nivel del cargo" DOUBLE, "Nombre del cargo" DOUBLE, "FECHA_CARGUE" VARCHAR(5000));
+2024-04-12 16:00:15,800 - INFO - La tabla TBL_EVENTOS_ASISTENTES_SF presentó error en su esquema. **Se eliminó** y se creó nuevamente con 16343 registros.
+2024-04-12 16:00:20,160 - INFO - Se anexó correctamente datos a la tabla TBL_EVENTOS_EMPRESAS_SF con 7880 registros.
+2024-04-12 16:13:10,996 - INFO - Se anexó correctamente datos a la tabla TBL_VARIABLES_VITALES_SALESFORCE con 1966359 registros.
+2024-04-12 16:13:41,914 - INFO - Se anexó correctamente datos a la tabla TBL_VENTA_EMPRESARIAL_LECTURA_SF con 24513 registros.
+2024-04-12 16:13:45,618 - INFO - Se anexó correctamente datos a la tabla TBL_ALIADOS_SF con 156 registros.
+2024-04-12 16:13:49,373 - INFO - Se anexó correctamente datos a la tabla TBL_CAMPAÑAS_CORPORATIVAS_SF con 663 registros.
+2024-04-12 16:13:52,999 - INFO - Se anexó correctamente datos a la tabla TBL_CAMPAÑAS_EMPRESARIALES_SF con 178 registros.
+2024-04-12 16:13:59,527 - INFO - Se anexó correctamente datos a la tabla TBL_DESARROLLO_EMPRESARIAL_SF con 6453 registros.
+2024-04-12 16:14:07,986 - INFO - Se anexó correctamente datos a la tabla TBL_EMPLEABILIDAD_SF con 9734 registros.
+2024-04-12 16:14:11,337 - INFO - Se anexó correctamente datos a la tabla TBL_FORMACION_EMP_FOSFEC_SF con 98 registros.
+2024-04-12 16:14:18,258 - INFO - Se anexó correctamente datos a la tabla TBL_LICITACION_SF con 4764 registros.
+2024-04-12 16:14:23,787 - INFO - Se anexó correctamente datos a la tabla TBL_VENTA_INDIVIDUAL_COTIZACION_SF con 896 registros.
+2024-04-12 16:15:03,022 - INFO - Se anexó correctamente datos a la tabla TBL_CUENTAS_SF con 96925 registros.
+2024-04-12 16:26:16,138 - INFO - Se anexó correctamente datos a la tabla TBL_CUENTAS_PERSONAL_SF con 5015952 registros.
+2024-04-12 16:26:20,741 - INFO - Se anexó correctamente datos a la tabla TBL_RIESGO_SF con 3973 registros.
+2024-04-12 16:33:22,094 - INFO - Se anexó correctamente datos a la tabla TBL_ATRACCION_VISITAS_SF con 463686 registros.
+2024-04-12 16:34:57,909 - INFO - Se anexó correctamente datos a la tabla TBL_CARTERIZACION_SF con 538409 registros.
+2024-04-12 16:35:05,497 - INFO - Se anexó correctamente datos a la tabla TBL_PAZYSALVOS_FUGA_SF con 3998 registros.
