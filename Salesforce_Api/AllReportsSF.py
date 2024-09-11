@@ -3,7 +3,6 @@ import os
 import pandas as pd
 import requests
 from io import StringIO
-
 import unicodedata
 from simple_salesforce import Salesforce, SalesforceLogin, SFType
 import hana_ml as hana
@@ -131,9 +130,11 @@ reports_id = {
     # 'TBL_CONTACTOS_SF':'00OTS000000YDfZ2AW',
     'TBL_RIESGO_SF': '00OTS000000YF9V2AW',
     'TBL_ATRACCION_VISITAS_SF': '00OTS000000YDsT2AW',
-    # ####'TBL_CARTERIZACION_SF': '00O5a000007dlAIEAY', Después del 15 de Mayo 2024 se podría borrar
-    'T_CARTERIZACION_SF_STG': '00OTS000000svZB2AY',
-    'TBL_PAZYSALVOS_FUGA_SF': '00OTS000000lg0b2AA'
+    ###'TBL_CARTERIZACION_SF': '00O5a000007dlAIEAY', Después del 15 de Mayo 2024 se podría borrar
+    # 'T_CARTERIZACION_SF_STG': '00OTS000000svZB2AY',
+    'TBL_PROPIETARIOS_DE_CUENTA_SF': '00OTS000001jyib2AA',
+    'TBL_PAZYSALVOS_FUGA_SF': '00OTS000000lg0b2AA',
+    'TBL_FORMACION_FOSFEC_SF': '00OTS000001nVJp2AM'
 }
 
 
@@ -171,50 +172,61 @@ for reporte in reports_id:
         elif reportDf[columna].dtype == int or reportDf[columna].dtype == float:
             reportDf[columna] = reportDf[columna].fillna(0)
 
-    if reporte == 'TBL_VARIABLES_VITALES_SALESFORCE':
-        reportDf['Fecha de Pago'] = reportDf['Fecha de Pago'].astype('object')
-        # Lidiar con los valores no válidos (por ejemplo, reemplazar NaN con cero)
-        reportDf['Valor Aportes'] = reportDf['Valor Aportes'].fillna(0)
-        reportDf['Valor Aportes'] = reportDf['Valor Aportes'].astype('object')
-        reportDf['Valor Subsidio'] = reportDf['Valor Subsidio'].fillna(0)
-        reportDf['Valor Subsidio'] = reportDf['Valor Subsidio'].astype('object')
-        reportDf['Fecha de Ciclo de Pago'] = pd.to_datetime(reportDf['Fecha de Ciclo de Pago'])
-        reportDf['Posición Ranking Grupo'] = reportDf['Posición Ranking Grupo'].fillna(0)
-        reportDf['Posición Ranking Grupo'] = reportDf['Posición Ranking Grupo'].astype('int64')
-        reportDf['Posición Ranking Empresa'] = reportDf['Posición Ranking Empresa'].fillna(0)
-        reportDf['Posición Ranking Empresa'] = reportDf['Posición Ranking Empresa'].str.replace(',', '.').astype(float)
+    reportDf.to_csv(rf'ReportsExcel\{reporte}.csv', index=False)
 
-    if reporte == 'TBL_ATRACCION_VISITAS_SF':
-        reportDf['Comentarios'] = reportDf['Comentarios'].str.slice(0, 4900)
 
-    if reporte == 'T_CARTERIZACION_SF_STG':
-        columnas_a_eliminar = ['Fecha estado de atraccion anterior',
-                                'Dirección',
-                                'Motivos de No Interesado',
-                                'Cúal Motivo No interesado?',
-                                'Fecha Motivo No Interesado'
-                               ]
-        reportDf = reportDf.drop(columns=columnas_a_eliminar)
-        reportDf['FECHA_CARGUE'] = hora_archivo
-        print(reportDf.head(10))
-        truncate_data_keepnames(reportDf, schema, reporte)
-        print(f'La tabla {reporte} presentó error en su esquema. **Se eliminó** y se creó nuevamente con {reportDf.shape[0]} registros.')
-        logging.info(f'La tabla {reporte} presentó error en su esquema. **Se eliminó** y se creó nuevamente con {reportDf.shape[0]} registros.')
-    else:
-        # Renombra las columnas del DataFrame
-        reportDf.rename(columns=nuevos_nombres, inplace=True)
-        reportDf['FECHA_CARGUE'] = hora_archivo
-        print(reportDf.head(10))
-        # try:
-        #     appen_data(reportDf, schema, reporte)
-        #     print(f'Se anexó correctamente datos a la tabla {reporte} con {reportDf.shape[0]} registros.')
-        #     logging.info(f'Se anexó correctamente datos a la tabla {reporte} con {reportDf.shape[0]} registros.')
-        # except:
-        try:
-            appen_data(reportDf, schema, reporte)
-            print(f'La tabla {reporte} presentó error en su esquema. **Se eliminó** y se creó nuevamente con {reportDf.shape[0]} registros.')
-            logging.info(f'La tabla {reporte} presentó error en su esquema. **Se eliminó** y se creó nuevamente con {reportDf.shape[0]} registros.')
-        except:
-            print(f'La tabla {reporte} presentó error en su esquema. **NO SE CARGÓ**')
-            logging.info(f'La tabla {reporte} presentó error en su esquema. **NO SE CARGÓ**')
-            pass
+    # if reporte == 'TBL_VARIABLES_VITALES_SALESFORCE':
+    #     reportDf['Fecha de Pago'] = reportDf['Fecha de Pago'].astype('object')
+    #     # Lidiar con los valores no válidos (por ejemplo, reemplazar NaN con cero)
+    #     reportDf['Valor Aportes'] = reportDf['Valor Aportes'].fillna(0)
+    #     reportDf['Valor Aportes'] = reportDf['Valor Aportes'].astype('object')
+    #     reportDf['Valor Subsidio'] = reportDf['Valor Subsidio'].fillna(0)
+    #     reportDf['Valor Subsidio'] = reportDf['Valor Subsidio'].astype('object')
+    #     reportDf['Fecha de Ciclo de Pago'] = pd.to_datetime(reportDf['Fecha de Ciclo de Pago'])
+    #     reportDf['Posición Ranking Grupo'] = reportDf['Posición Ranking Grupo'].fillna(0)
+    #     reportDf['Posición Ranking Grupo'] = reportDf['Posición Ranking Grupo'].astype('int64')
+    #     reportDf['Posición Ranking Empresa'] = reportDf['Posición Ranking Empresa'].fillna(0)
+    #     reportDf['Posición Ranking Empresa'] = reportDf['Posición Ranking Empresa'].str.replace(',', '.').astype(float)
+    #
+    # elif reporte == 'TBL_ATRACCION_VISITAS_SF':
+    #     reportDf['Comentarios'] = reportDf['Comentarios'].str.slice(0, 4900)
+    #
+    # elif reporte == 'T_CARTERIZACION_SF_STG':
+    #     columnas_a_eliminar = ['Fecha estado de atraccion anterior',
+    #                             'Dirección',
+    #                             'Motivos de No Interesado',
+    #                             'Cúal Motivo No interesado?',
+    #                             # 'Fecha Motivo No Interesado'
+    #                            ]
+    #     reportDf = reportDf.drop(columns=columnas_a_eliminar)
+    #     reportDf['FECHA_CARGUE'] = hora_archivo
+    #     print(reportDf.head(10))
+    #     # truncate_data_keepnames(reportDf, schema, reporte)
+    #     # print(f'La tabla {reporte} presentó error en su esquema. **Se eliminó** y se creó nuevamente con {reportDf.shape[0]} registros.')
+    #     # logging.info(f'La tabla {reporte} presentó error en su esquema. **Se eliminó** y se creó nuevamente con {reportDf.shape[0]} registros.')
+    #
+    # elif reporte == 'TBL_PROPIETARIOS_DE_CUENTA_SF':
+    #     reportDf['Número de cédula'] = reportDf['Número de cédula'].astype('object')
+    #
+    # else:
+    #     # Renombra las columnas del DataFrame
+    #     reportDf.rename(columns=nuevos_nombres, inplace=True)
+    #     # reportDf['FECHA_CARGUE'] = hora_archivo
+    #     print(reportDf.head(10))
+    #
+    # reportDf.to_csv(rf'ReportsExcel\{reporte}.csv', index= False)
+
+    #     # try:
+    #     #     appen_data(reportDf, schema, reporte)
+    #     #     print(f'Se anexó correctamente datos a la tabla {reporte} con {reportDf.shape[0]} registros.')
+    #     #     logging.info(f'Se anexó correctamente datos a la tabla {reporte} con {reportDf.shape[0]} registros.')
+    #     # except:
+    # try:
+    #     truncate_data(reportDf, schema, reporte)
+    #     print(f'La tabla {reporte} presentó error en su esquema. **Se eliminó** y se creó nuevamente con {reportDf.shape[0]} registros.')
+    #     logging.info(f'La tabla {reporte} presentó error en su esquema. **Se eliminó** y se creó nuevamente con {reportDf.shape[0]} registros.')
+    # except Exception as e:
+    #     truncate_data(reportDf, schema, reporte)
+    #     print(f'La tabla {reporte} presentó error en su esquema. **NO SE CARGÓ** {e}')
+    #     logging.info(f'La tabla {reporte} presentó error en su esquema. **NO SE CARGÓ** {e}')
+    #     pass

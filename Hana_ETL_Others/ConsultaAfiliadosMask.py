@@ -11,8 +11,8 @@ from selenium.webdriver.support.ui import Select
 from datetime import datetime
 import pandas as pd
 import time
-
 from selenium.webdriver.support.wait import WebDriverWait
+from ConsultaIdsParaMascara import id_afiliados
 
 
 # Función para validar y tomar el dato de la columna que sí tiene el dato
@@ -35,66 +35,33 @@ db_pwd = "Poison0624*"
 
 cc = ConnectionContext(db_url, db_port, db_user, db_pwd, encrypt="true", sslValidateCertificate="false")
 
-query_afiliados = f'''
-    WITH CTE AS (
-        SELECT DISTINCT TIPO_DOCUMENTO_AFILIADO, 
-            NO_DOCUMENTO_PERSONA,
-            ROW_NUMBER () OVER (PARTITION BY TIPO_DOCUMENTO_AFILIADO ORDER BY TIPO_DOCUMENTO_AFILIADO) AS VAL
-        FROM COLSUBSIDIO_IDN.TBL_AFILIADO_EMPRESA_SEGM 
-    )
-    SELECT TIPO_DOCUMENTO_AFILIADO, 
-        NO_DOCUMENTO_PERSONA
-    FROM CTE
-    --WHERE VAL <= 10
-    WHERE NO_DOCUMENTO_PERSONA IN ('80243275',
-'1014227578',
-'80245294',
-'1022977072',
-'1016055548',
-'1000514370',
-'1078457773',
-'1140861172',
-'1023366455',
-'1032464377',
-'52731537',
-'1032433019',
-'1143463533',
-'80019372',
-'1030636377',
-'1070950202',
-'1022387921',
-'1072963198',
-'275897'
-)
-    ORDER BY TIPO_DOCUMENTO_AFILIADO, VAL 
-'''
+# query_afiliados = f'''
+#     WITH CTE AS (
+#         SELECT DISTINCT TIPO_DOCUMENTO_AFILIADO,
+#             NO_DOCUMENTO_PERSONA,
+#             ROW_NUMBER () OVER (PARTITION BY TIPO_DOCUMENTO_AFILIADO ORDER BY TIPO_DOCUMENTO_AFILIADO) AS VAL
+#         FROM COLSUBSIDIO_IDN.TBL_AFILIADO_EMPRESA_SEGM
+#     )
+#     SELECT TIPO_DOCUMENTO_AFILIADO,
+#         NO_DOCUMENTO_PERSONA
+#     FROM CTE
+#     --WHERE VAL <= 10
+#     WHERE NO_DOCUMENTO_PERSONA IN ('80243275')
+#     ORDER BY TIPO_DOCUMENTO_AFILIADO, VAL
+# '''
+#
+# print(query_afiliados)
+#
+# id_afiliados = cc.sql(query_afiliados)
+# id_afiliados = id_afiliados.collect()
 
-print(query_afiliados)
 
-id_afiliados = cc.sql(query_afiliados)
-id_afiliados = id_afiliados.collect()
+# Id_afiliados se quema con los valores a consultar cuando no se sabe si la persona es afiliada o no
+print(id_afiliados.head(15))
+
 # Quitar comentario cuando se deban consultar en hana sino, dejarlos quemados como lista
 # id_afiliados_list = id_afiliados["NUM_IDENTIFICACION_AFILIADO"].tolist()
-id_afiliados_list = ['80243275',
-'1014227578',
-'80245294',
-'1022977072',
-'1016055548',
-'1000514370',
-'1078457773',
-'1140861172',
-'1023366455',
-'1032464377',
-'52731537',
-'1032433019',
-'1143463533',
-'80019372',
-'1030636377',
-'1070950202',
-'1022387921',
-'1072963198',
-'275897'
-]
+id_afiliados_list = []
 
 df_documentos_encontrados = id_afiliados["NO_DOCUMENTO_PERSONA"].tolist()
 # Encontrar los elementos faltantes y guardarlos en una lista
