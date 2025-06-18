@@ -15,12 +15,15 @@ path_file = path + '\\' + file_txt + ".rds"
 dfr = pyreadr.read_r(path_file)
 print(dfr.keys())
 df = dfr[None]
+df = df.head(1000)
+pyreadr.write_rds("Prueba.rds", df)
 # df = pd.DataFrame([dfr])
 
 # Validaciones
 print(f'Archivo txt: {file_txt}')
 print(f'Total registros: {df.count(axis=0)}')
 print(df.head(10))
+
 
 ## Credenciales SAP - Hana Database
 

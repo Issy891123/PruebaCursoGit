@@ -47,8 +47,8 @@ print(df_final.head(10))
 
 db_url = "548b50f4-1fe9-4725-baea-e9f96bb4f092.hana.prod-us10.hanacloud.ondemand.com"
 db_port = 443
-db_user = "linamargal"
-db_pwd = "Lina1595*"
+db_user = os.environ.get('DB_USER')
+db_pwd = os.environ.get('DB_PASSWORD')
 
 # Conexión con la base de datos
 cc = ConnectionContext(db_url, db_port, db_user, db_pwd, encrypt="true", sslValidateCertificate="false")
@@ -59,8 +59,8 @@ if cc:
 try:
     dfhana = dataframe.create_dataframe_from_pandas(connection_context=cc,
                                                     pandas_df=df_final,
-                                                    schema='COLSUBSIDIO_IDN',
-                                                    table_name='TBL_CAM_COMERCIO_CONSOLIDADA',
+                                                    schema='COLSUBSIDIO_HDI',
+                                                    table_name='T_IDN_TR_CCB_BASE_BASE',
                                                     drop_exist_tab=False,
                                                     # force=True)
                                                     append=True)

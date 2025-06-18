@@ -17,7 +17,7 @@ def concatenar_campos(row):
 
 # Función que agrega el nombre del archivo a todos los archivos descargados
 def procesar_archivo(file):
-    if file.endswith('.xlsx') and hora_archivo in file[:8]:
+    if file.endswith('.xlsx') and file[:8] in hora_archivo:
         archivo_completo = os.path.join(directorio, file)
         dfexcel = pd.read_excel(archivo_completo, skiprows=1)
         dfexcel['Archivo'] = file
@@ -29,7 +29,7 @@ directorio = r'C:\Users\estegomhin\Downloads'
 contenido = os.listdir(directorio)
 
 # Configuración de fechas
-inicio = datetime.now() - timedelta(days=5)
+inicio = datetime.now() - timedelta(days=0)
 fecha_cargue = inicio
 # fecha_cargue = fecha_cargue.strftime('%Y-%m-%d_%H-%M-%S')
 
@@ -41,7 +41,8 @@ if inicio.month < 10:
         hora_archivo = f'{inicio.year}0{inicio.month}{inicio.day}'
 else:
     hora_archivo = f'{inicio.year}{inicio.month}{inicio.day}'
-# hora_archivo = ''
+
+hora_archivo = ['20250408']
 
 # Procesar archivos en paralelo y combinarlos en un solo DataFrame
 with ThreadPoolExecutor() as executor:
@@ -91,30 +92,30 @@ df_final = df_final.drop(['Contiene Proponente'], axis=1)
 print(f'Total registros a cargar: {df_final.shape[0]}')
 print(df_final.head(10))
 
-# Credenciales SAP - Hana Database
-db_url = "548b50f4-1fe9-4725-baea-e9f96bb4f092.hana.prod-us10.hanacloud.ondemand.com"
-db_port = 443
-db_user = "ESTEGOMHIN"
-db_pwd = "Poison0624*"
+# # Credenciales SAP - Hana Database
+# db_url = "548b50f4-1fe9-4725-baea-e9f96bb4f092.hana.prod-us10.hanacloud.ondemand.com"
+# db_port = 443
+# db_user = "ESTEGOMHIN"
+# db_pwd = "Poison0624*"
+#
+# # Conexión con la base de datos
+# cc = ConnectionContext(db_url, db_port, db_user, db_pwd, encrypt="true", sslValidateCertificate="false")
+#
+# if cc:
+#     print("Success <3<3<3<3")
+#
+# try:
+#     dfhana = dataframe.create_dataframe_from_pandas(connection_context=cc,
+#                                                     pandas_df=df_final,
+#                                                     schema='COLSUBSIDIO_IDN',
+#                                                     table_name='TBL_CAM_COMERCIO_CONSOLIDADA',
+#                                                     drop_exist_tab=False,
+#                                                     # force=True)
+#                                                     append=True)
+# except dbapi.IntegrityError as e:
+#     print(e)
+#     pass
 
-# Conexión con la base de datos
-cc = ConnectionContext(db_url, db_port, db_user, db_pwd, encrypt="true", sslValidateCertificate="false")
-
-if cc:
-    print("Success <3<3<3<3")
-
-try:
-    dfhana = dataframe.create_dataframe_from_pandas(connection_context=cc,
-                                                    pandas_df=df_final,
-                                                    schema='COLSUBSIDIO_IDN',
-                                                    table_name='TBL_CAM_COMERCIO_CONSOLIDADA',
-                                                    drop_exist_tab=False,
-                                                    # force=True)
-                                                    append=True)
-except dbapi.IntegrityError as e:
-    print(e)
-    pass
 
 
-
-cc.close()
+# cc.close()

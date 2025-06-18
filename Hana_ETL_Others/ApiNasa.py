@@ -7,10 +7,11 @@ import hana_ml.dataframe as dataframe
 from hdbcli import dbapi
 
 # Configuración de la API de la NASA
-NASA_API_KEY = "DEMO_KEY"
+NASA_API_KEY = "UEbblIjwUZwLZGFM3PnUKn77EFdXHZSWEG07UddT"
 NASA_PROJECTS_URL = f"https://api.nasa.gov/techtransfer/patent/?api_key={NASA_API_KEY}"
 
-TEST_URL = f"https://api.nasa.gov/planetary/apod?api_key={NASA_API_KEY}"
+# Api opcional para traer datos si la principal no está disponible
+TEST_URL = "https://api.nasa.gov/DONKI/notifications?startDate=2014-05-01&endDate=2014-05-08&type=all&api_key=DEMO_KEY" # f"https://api.nasa.gov/planetary/apod?api_key={NASA_API_KEY}"
 response = requests.get(TEST_URL)
 print(response.status_code, response.text)
 
@@ -51,14 +52,9 @@ def transform_data(data):
 # Función que transforma data alternativa por si la api principal no funciona
 def transform_alternate_data(data):
     """ Transforma los datos en un DataFrame de Pandas """
-    df = pd.DataFrame([{
-        "date": data["date"],
-        "title": data["title"],
-        "explanation": data["explanation"],
-        "media_type": data["media_type"],
-        "hdurl": data.get("hdurl", ""),  # Algunos pueden no tener HD URL
-        "url": data["url"]
-    }])
+    df = pd.DataFrame(data)
+    # Aplicar el substring de los primeros 5000 caracteres a la columna 'messageBody'
+    df['messageBody'] = df['messageBody'].apply(lambda x: x[:5000] if isinstance(x, str) else x)
     return df
 
 # Conexión flexible a BD (SAP HANA, AWS RDS, Azure)

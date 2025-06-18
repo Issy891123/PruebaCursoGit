@@ -125,7 +125,7 @@ for clave in list_emp:
         print(df_bajas.head(10))
         empresas_con_bajas += 1
 
-    with open(fr"C:\Users\ESTEGOMHIN\OneDrive - colsubsidio.com (1)\Betterfly\Logs\Logs_bajas_{hora_archivo}.csv", "a") as file:
+    with open(fr"C:\Users\ESTEGOMHIN\OneDrive - colsubsidio.com (1)\Betterfly\Logs\Logs_bajas_{hora_archivo}.csv", "a", encoding='utf-8') as file:
         file.write(f'{clave}; {list_emp[clave]}; {cant_bajas}\n')
         file.close()
 

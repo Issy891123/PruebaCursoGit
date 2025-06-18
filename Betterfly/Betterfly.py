@@ -49,8 +49,8 @@ celdas = hoja['A2':'B100000']
 
 db_url = "548b50f4-1fe9-4725-baea-e9f96bb4f092.hana.prod-us10.hanacloud.ondemand.com"
 db_port = 443
-db_user = os.environ.get('DB_USER')
-db_pwd = os.environ.get('DB_PASSWORD')
+db_user = 'estegomhin' # os.environ.get('DB_USER')
+db_pwd = 'Poison0624*' # os.environ.get('DB_PASSWORD')
 
 cc = ConnectionContext(db_url, db_port, db_user, db_pwd, encrypt="true", sslValidateCertificate="false")
 
