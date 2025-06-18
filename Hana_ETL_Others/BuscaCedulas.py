@@ -7,7 +7,7 @@ from datetime import datetime
 inicio = datetime.now()
 hora_archivo = inicio.strftime('%Y-%m-%d_%H-%M-%S')
 
-# Lista de documentos
+# Lista de documentos jdbvkjsdbvksdbvk
 documentos = ['CC51830878',
     'CC79724540',
     'CC80151482',
